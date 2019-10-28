@@ -1,0 +1,1 @@
+SELECT esc.MainPointID qcpointcode, esc.pointattention pointtext, esc.describe_ids DESCRIBEID, esc.describe_ids tallid, esc.describetext talltext, esc.imgtimepointorder "order" FROM es_qc_point esc where esc.BUSINESSNO='66a6a532-5d6c-4f40-a0f2-d67668a0d9f2' and esc.status='0' 
