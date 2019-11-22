@@ -1,0 +1,17 @@
+
+cd /home/esrapp/ffmpegnew2/bin
+
+1¡¢Ô´ÊÓÆµ×ªÂëavi->mp4
+
+
+./ffmpeg -i 'inputPath' -r 10 -c:v mpeg4 -crf 25 -strict -2 -y 'outputPath'
+
+
+./ffmpeg -i '/home/esrapp/tmp/output/1.wmv' -r 10 -c:v libx264 -crf 25 -strict -2 -s 1280*720 -y '/home/esrapp/tmp/newoutput/1.wmv'
+
+2¡¢ÇÐÆ¬
+./ffmpeg -i 'inputPath' -b 512k -r 10 -c:v libx264 -crf 25 -strict -2 -s 1280*720 -y 'outputPath'
+
+
+./ffmpeg -i /home/esrapp/tmp/output/mpeg4.mp4 -f segment -segment_time 15 -segment_list /home/esrapp/ffmpeg/sinosoft_transcode/output/mpeg41636.m3u8 -c copy -bsf h264_mp4toannexb,dump_extra=freq=keyframe -map 0 /home/esrapp/ffmpeg/sinosoft_transcode/output/mpeg41636-%d.ts
+
